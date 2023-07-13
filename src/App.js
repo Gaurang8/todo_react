@@ -25,14 +25,14 @@ function App() {
     let localData = localStorage.getItem("ToDo_data") || '[]';
     const parsedData = JSON.parse(localData);
 
+    setDataObj(parsedData);
+
     if (parsedData.length > 0) {
-      console.log('true')
       setClearClass(true);
     } else {
       setClearClass(false);
     }
 
-    setDataObj(parsedData);
   };
 
   const deleteTask = (index) => {
